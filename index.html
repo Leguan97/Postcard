@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width"=device-width, initial-scale=1.0>
+		<link id="css" rel="stylesheet" type="text/css" href="design.css">
+		<title>Mobile Computing Prüfung</title>
+		<script src="camera.js" async></script>
+		<script src="saveImage.js" async></script>
+		<script src="navigationbar.js" async></script>
+	</head>
+	
+	<body>
+		<header class="horizontalbox">
+			<input type="image" id="navbutton" src="menu.png" alt="NAV" onclick="toggleNavigation()">
+			<h1>Postcard Creator by Jonas Lehmann</h1>
+		</header>
+		
+		<div class="navigationbar" id="navigation">
+			<a href='#'>Image Creator</a>
+			<a href='gallery.html'>Gallery</a>
+		</div>
+		
+		<main>
+			<!--Kamerabox-->
+			<div  class="kasten">
+				<div class="content id= "camera">
+					<video id="video" autoplay muted>
+				</div>
+					<div class="content">
+						<button onclick="enableCamera()">Enable Cam</button>
+						<button onclick="getLocation()">Get location</button>
+						<p id="p_geoloc">Get your geolocation</p>
+						<p id="p_city">Cityname</p>
+						<button id="snap">Take Foto</button>
+					</div>
+				
+			</div>
+			
+			<!--Fertige Karte Box-->
+			<div class="kasten">
+				<div class="content">
+					<div id="noPic">
+						<p>Hier öffnet sich ihr Foto.</p>
+					</div>
+				</div>
+				<div class="content">
+					<button onclick="saveImage()">Save</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
